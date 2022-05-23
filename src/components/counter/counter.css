@@ -1,0 +1,88 @@
+.counter .number-box{
+    position: relative;
+    /* border: 1px solid red; */
+    box-shadow: -10px 15px 15px 5px rgb(0 0 0 / 30%);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.counter .number-box .card{
+    position: relative;
+    width: 180px;
+    height: 90px;
+}
+
+.counter .number-box .top{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: rgba(52, 54, 80, 0.205);
+}
+
+.counter .number-box .top::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(33, 29, 53, 0.1);
+    z-index: 9;
+}
+
+.counter .number-box .bottom{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;    
+    background-color: hsl(236, 21%, 26%);   
+}
+
+.counter .number-box .number{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35px;
+    font-weight: 800;
+    font-size: 72px;
+    color: hsl(345, 95%, 68%);
+    z-index: 1;
+}
+
+.counter .number-box .divider{
+    position: absolute;
+    width: 100%;
+    background-color: #0c0c10;
+    height: .5px;
+    top: 90px;
+    z-index: 10;
+}
+
+.counter .number-box .divider::before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -4.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0c0c10;
+}
+
+.counter .number-box .divider::after{
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -4.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0c0c10;
+}
+
+
+.counter .label {
+    color: hsl(237, 18%, 59%);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;    
+    margin-top: 21px;
+}
+
+/* - Grayish blue: hsl(237, 18%, 59%)
+- Soft red: hsl(345, 95%, 68%) */
