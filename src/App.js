@@ -1,7 +1,8 @@
 import "./App.css";
 
 // Components
-import Counter from "./components/counter/counter";
+import CountDown from "./components/countdown/countdown";
+import Expired from "./components/expired/expired";
 
 // Icons - SVG
 import facebook from "./assets/icon-facebook.svg";
@@ -27,17 +28,9 @@ function App() {
     height: "100vh",
   };
 
-  const formatTimeWithCero = (number) => {
-    if (number < 10) {
-      return `0${number}`;
-    }
-
-    return number;
-  };
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const countDownDate = new Date(new Date("Jun 24, 2022 15:37:25").getTime());
-
+  const countDownDate = new Date(new Date("Jun 24, 2022 00:00:00").getTime());
+  // const countDownDate = new Date(new Date().getTime());
   const [countDown, setCountDown] = useState(
     countDownDate - new Date().getTime()
   );
@@ -60,26 +53,42 @@ function App() {
   return (
     <div className="App">
       <main className="content" style={contentStyle}>
-        <div className="title">WE'RE LAUNCHING SOON</div>
-        <div className="countdown">
-          <Counter number={formatTimeWithCero(days)} label="Days" />
-          <Counter number={formatTimeWithCero(hours)} label="Hours" />
-          <Counter number={formatTimeWithCero(minutes)} label="Minutes" />
-          <Counter number={formatTimeWithCero(seconds)} label="Seconds" />
-        </div>
+        {days + hours + minutes + seconds > 0 ? (
+          <CountDown
+            days={days}
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+          />
+        ) : (
+          <Expired />
+        )}
       </main>
       <footer className="footer" style={footerStyle}>
         <div className="links">
-          <a href="/">
+          <a
+            href="https://www.facebook.com/JosepRojasNice/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={facebook} alt="facebook" />
           </a>
-          <a href="/">
+          <a
+            href="https://twitter.com/StrkJoseph"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={twitter} alt="twitter" />
           </a>
-          <a href="/">
+          <a
+            href="https://github.com/llsonyll"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github} alt="github" />
           </a>
         </div>
+        <p> By: Josep Rojas | llsonyll </p>
       </footer>
     </div>
   );

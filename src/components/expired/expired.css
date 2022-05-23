@@ -1,0 +1,10 @@
+.expired {
+    /* border: 1px solid blue; */
+}
+
+.expired .title {
+    color:red;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
