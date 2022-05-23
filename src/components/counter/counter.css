@@ -15,14 +15,14 @@
 .counter .number-box .top{
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    background-color: rgba(52, 54, 80, 0.205);
+    background-color: hsl(236, 21%, 26%);
 }
 
 .counter .number-box .top::before{
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(33, 29, 53, 0.1);
+    background-color: rgb(0,0,0, .25);
     z-index: 9;
 }
 
@@ -36,9 +36,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 35px;
+    top: 30px;
     font-weight: 800;
-    font-size: 72px;
+    font-size: 84px;
     color: hsl(345, 95%, 68%);
     z-index: 1;
 }
@@ -47,7 +47,7 @@
     position: absolute;
     width: 100%;
     background-color: #0c0c10;
-    height: .5px;
+    height: 1.5px;
     top: 90px;
     z-index: 10;
 }
