@@ -18,9 +18,10 @@
 
 .content .countdown {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
 }
-
 
 .footer {
   position: absolute;

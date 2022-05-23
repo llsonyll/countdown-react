@@ -84,5 +84,49 @@
     margin-top: 21px;
 }
 
-/* - Grayish blue: hsl(237, 18%, 59%)
-- Soft red: hsl(345, 95%, 68%) */
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+@media screen and (max-width: 800px){
+    
+    .counter .number-box .card{
+        position: relative;
+        width: 120px;
+        height: 60px;
+    }
+    
+    .counter .number-box .number{
+        left: 0;
+        right: 0;
+        top: 27.5px;
+        font-size: 48px;
+    }
+    
+    .counter .number-box .divider{
+        height: 1px;
+        top: 60px;
+    }
+    
+    .counter .number-box .divider::before{
+        left: -2.5px;
+        top: -2.5px;
+        width: 5px;
+        height: 5px;
+    }
+    
+    .counter .number-box .divider::after{
+        right: -2.5px;
+        top: -2.5px;
+        width: 5px;
+        height: 5px;
+    }    
+    
+    .counter .label {
+        color: hsl(237, 18%, 59%);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;    
+        margin-top: 21px;
+    }
+}
