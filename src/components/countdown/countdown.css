@@ -4,3 +4,9 @@
     letter-spacing: 8px;
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 800px){
+    .countDown .title {       
+        margin-bottom: 20px;
+    }
+}
