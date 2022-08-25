@@ -29,7 +29,7 @@ function App() {
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const countDownDate = new Date(new Date("Jun 24, 2022 00:00:00").getTime());
+  const countDownDate = new Date(new Date("Jun 24, 2023 00:00:00").getTime());
   // const countDownDate = new Date(new Date().getTime());
   const [countDown, setCountDown] = useState(
     countDownDate - new Date().getTime()
